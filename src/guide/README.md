@@ -43,7 +43,7 @@ Ferramentas, bibliotecas, suporte para plugins e outras features.
 
 O Odin é um projeto **Open Source**, qualquer um pode fazer parte. Para contribuir basta fazer o [**Fork**](https://github.com/wpbrasil/odin), criar um `Branch`, realizar as melhorias e enviá-lo o `Pull Request`.
 
-<odin-contributions-list :start="5"></odin-contributions-list>
+<odin-contributions-list></odin-contributions-list>
 
 ## Licença
 
