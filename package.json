@@ -2,6 +2,10 @@
   "name": "wpod.in",
   "description": "Website da documentação oficial do Odin Framework",
   "version": "1.0.0",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build --dest docs --debug src"
+  },
   "devDependencies": {
     "vuepress": "^0.14.3"
   },
