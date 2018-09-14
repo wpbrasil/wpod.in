@@ -2,7 +2,7 @@
 
 Criar **user metas** sempre foi uma tarefa demorada e chata, entretanto no Odin é possível criar de forma bem simples utilizando a classe `Odin_User_Meta`.
 
-## Instalação:
+## Instalação
 
 Adicione a seguinte linha no functions.php do seu tema:
 
@@ -10,7 +10,7 @@ Adicione a seguinte linha no functions.php do seu tema:
 require_once get_template_directory() . '/core/classes/class-user-meta.php';
 ```
 
-## Criando um User Meta:
+## Criando um User Meta
 
 Você deve instanciar a classe para criar o _user meta_ da seguinte forma:
 
@@ -21,7 +21,7 @@ $adicionais_user_meta = new Odin_User_Meta(
 );
 ```
 
-## Adicionando campos User Meta:
+## Adicionando campos User Meta
 
 Adicione os campos utilizando o método `set_fields()` como por exemplo:
 
@@ -41,7 +41,7 @@ $adicionais_user_meta->set_fields(
 Como é possível ver no exemplo, é necessário criar um _array_ que irá conter os campos do nosso _User Meta_.  
 Tipos de campo:
 
-### Estão disponível os seguintes tipos de campo:
+### Estão disponível os seguintes tipos de campo
 
 - [text](#wiki-text)
 - [textarea](#wiki-textarea)
@@ -297,7 +297,7 @@ array(
 )
 ```
 
-## Utilizando os campos de User Meta no seu tema:
+## Utilizando os campos de User Meta no seu tema
 
 Para recuperar a informação de um campo do _User Meta_ use a função [`get_user_meta()`](https://codex.wordpress.org/Function_Reference/get_user_meta);
 
@@ -307,7 +307,7 @@ Exemplo para pegar o valor do _User Meta_ `your_id_name`:
 <?php get_user_meta( $user->ID,'your_id_name', true ); ?>
 ```
 
-## Exemplo:
+## Exemplo
 
 Veja exatamente como criar um metabox em seu tema (bónus campos do HTML5).
 
@@ -609,6 +609,6 @@ function user_meta_example() {
 add_action( 'init', 'user_meta_example', 1 );
 ```
 
-## Código fonte:
+## Código fonte
 
 `Odin_User_Meta` está localizado em [`core/classes/class-user-meta.php`](https://github.com/wpbrasil/odin/blob/master/core/classes/class-user-meta.php).
