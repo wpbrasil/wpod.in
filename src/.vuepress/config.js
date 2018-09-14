@@ -1,5 +1,4 @@
 module.exports = {
-    base: '/wpod.in/',
     title: 'Odin',
     description: 'Um Framework WordPress que chuta bundas.',
     host: 'localhost',
