@@ -17,6 +17,10 @@ module.exports = {
                 link: 'http://expo.wpod.in/'
             },
             {
+                text: 'MIV',
+                link: 'https://github.com/wpbrasil/odin-miv'
+            },
+            {
                 text: 'GitHub',
                 link: 'https://github.com/wpbrasil/odin'
             }
