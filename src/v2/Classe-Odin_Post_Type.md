@@ -2,7 +2,7 @@
 
 Para facilitar a criação de **tipos de conteúdo** (Post Type) criamos a classe `Odin_Post_Type` para auxiliar a construção.
 
-## Instalação:
+## Instalação
 
 Adicione a seguinte linha em seu `functions.php`:
 
@@ -41,7 +41,7 @@ $args = array(
 );
 ```
 
-## Configurando os títulos ($labels):
+## Configurando os títulos ($labels)
 
 É possível alterar os $labels utilizando o método `set_labels()`:
 
@@ -55,7 +55,7 @@ $video->set_labels(
 
 São aceitos todos os $labels da função [`register_post_type()`](http://codex.wordpress.org/Function_Reference/register_post_type#Arguments).
 
-## Configurando os argumentos:
+## Configurando os argumentos
 
 Também é possível modificar os argumentos ao seu gosto utilizando o método `set_arguments()`:
 
@@ -71,7 +71,7 @@ No exemplo acima, os "supports" foram modificados para ter apenas "title", "edit
 
 São aceitos todos os argumentos da função [`register_post_type()`](http://codex.wordpress.org/Function_Reference/register_post_type#Arguments).
 
-#### Adicionando ícones para o Post Type no wp-admin:
+### Adicionando ícones para o Post Type no wp-admin
 
 O `set_arguments()` permite utilizar qualquer um dos argumentos disponíveis para a função [`register_post_type()`](http://codex.wordpress.org/Function_Reference/register_post_type#Arguments).
 
@@ -117,6 +117,6 @@ function odin_video_cpt() {
 add_action( 'init', 'odin_video_cpt', 1 );
 ```
 
-## Código fonte:
+## Código fonte
 
 Odin_Post_Type esta localizado em [`core/classes/class-post-type.php`](https://github.com/wpbrasil/odin/blob/master/core/classes/class-post-type.php).
