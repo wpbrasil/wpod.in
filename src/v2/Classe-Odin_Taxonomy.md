@@ -2,7 +2,7 @@
 
 Criar **taxonomias** personalizadas no Odin é bem simples ao utilizar a class `Odin_Taxonomy`.
 
-## Instalação:
+## Instalação
 
 Adicione a seguinte linha no `functions.php` de seu tema:
 
@@ -10,7 +10,7 @@ Adicione a seguinte linha no `functions.php` de seu tema:
 require_once get_template_directory() . '/core/classes/class-taxonomy.php';
 ```
 
-## Criando Custom Taxonomies:
+## Criando Custom Taxonomies
 
 ```php
 $video = new Odin_Taxonomy(
@@ -34,7 +34,7 @@ $args = array(
 );
 ```
 
-## Configurando os títulos ($labels):
+## Configurando os títulos ($labels)
 
 É possível alterar os `$labels` utilizando o método `set_labels()`:
 
@@ -48,7 +48,7 @@ $video->set_labels(
 
 São aceitos todos os `$labels` da função [`register_taxonomy()`](http://codex.wordpress.org/Function_Reference/register_taxonomy#Arguments).
 
-## Configurando os argumentos:
+## Configurando os argumentos
 
 Configure os argumentos utilizando método `set_arguments()`:
 
@@ -65,7 +65,7 @@ Você pode utilizar isso para adicionar ou alterar qualquer argumento do Taxonom
 
 São aceitos todos os argumentos da função [`register_taxonomy()`](http://codex.wordpress.org/Function_Reference/register_taxonomy#Arguments).
 
-## Exemplo completo:
+## Exemplo completo
 
 Exemplo de como utilizar e funcionar corretamente as traduções:
 
@@ -93,6 +93,6 @@ function odin_video_taxonomy() {
 add_action( 'init', 'odin_video_taxonomy', 1 );
 ```
 
-## Código fonte:
+## Código fonte
 
 `Odin_Taxonomy` esta localizado em [`core/classes/class-taxonomy.php`](https://github.com/wpbrasil/odin/blob/master/core/classes/class-taxonomy.php).
