@@ -2,7 +2,7 @@
 
 Criar **metaboxes** sempre foi uma tarefa demorada e chata, entretanto no Odin é possível criar de forma bem simples utilizando a classe `Odin_Metabox`.
 
-## Instalação:
+## Instalação
 
 Adicione a seguinte linha no functions.php do seu tema:
 
@@ -10,7 +10,7 @@ Adicione a seguinte linha no functions.php do seu tema:
 require_once get_template_directory() . '/core/classes/class-metabox.php';
 ```
 
-## Criando um Metabox:
+## Criando um Metabox
 
 Você deve instanciar a classe para criar o _metabox_ da seguinte forma:
 
@@ -24,7 +24,7 @@ $videos_metabox = new Odin_Metabox(
 );
 ```
 
-## Adicionando campos no Metabox:
+## Adicionando campos no Metabox
 
 Adicione os campos utilizando o método `set_fields()` como por exemplo:
 
@@ -44,7 +44,7 @@ $videos_metabox->set_fields(
 Como é possível ver no exemplo, é necessário criar um _array_ que irá conter os campos do nosso _Metabox_.  
 Tipos de campo:
 
-### Estão disponível os seguintes tipos de campo:
+### Estão disponível os seguintes tipos de campo
 
 - [text](#wiki-text)
 - [textarea](#wiki-textarea)
@@ -300,7 +300,7 @@ array(
 )
 ```
 
-## Utilizando os campos do Metabox no seu tema:
+## Utilizando os campos do Metabox no seu tema
 
 Para recuperar a informação de um campo do _Metabox_ use a função [`get_post_meta()`](http://codex.wordpress.org/Function_Reference/get_post_meta);
 
@@ -310,7 +310,7 @@ Exemplo para pegar o valor do _Metabox_ `your_id_name` dentro de um loop:
 <?php get_post_meta( $post->ID,'your_id_name', true ); ?>
 ```
 
-## Adicionando um campo como uma coluna no post type:
+## Adicionando um campo como uma coluna no post type
 
 É possível transformar um campo numa coluna do post type utilizando o atributo **add_column**, veja um exemplo abaixo:
 
@@ -325,7 +325,8 @@ array(
 ```
 
 Esse exemplo acima vai gerar a seguinte coluna:
-![](http://i.imgur.com/tqBVmVn.png)
+
+![image](https://user-images.githubusercontent.com/1139893/45570827-81cb5300-b83a-11e8-8225-e8ef08051fcf.png)
 
 ## Actions da classe
 
@@ -339,7 +340,7 @@ Nesta classe temos 7 actions que são:
 - [odin_metabox_wrap_after_SLUG](#wiki-odin_metabox_wrap_after_slug)
 - odin*metabox_container_after*
 
-#### odin_metabox_wrap_before_SLUG
+### odin_metabox_wrap_before_SLUG
 
 Este action funciona antes da tabela que exibe os campos que foram configurados para o Metabox.
 Você deve trocar o SLUG pelo Slug/ID do Metabox.
@@ -414,7 +415,7 @@ add_action( 'odin_metabox_field_videos', 'odin_custom_metabox_fields', 1, 4 );
 // Observe que pegamos 4 argumentos: $type, $id, $current e $options.
 ```
 
-## Exemplo:
+## Exemplo
 
 Veja exatamente como criar um metabox em seu tema (bónus campos do HTML5).
 
@@ -730,6 +731,6 @@ add_action( 'init', 'video_metabox_example', 1 );
 
 ![odin_metabox](https://cloud.githubusercontent.com/assets/1139893/4895898/a37701da-63f1-11e4-8fde-aa80b2df424e.png)
 
-## Código fonte:
+## Código fonte
 
 `Odin_Metabox` esta localizado em [`core/classes/class-metabox.php`](https://github.com/wpbrasil/odin/blob/master/core/classes/class-metabox.php).
