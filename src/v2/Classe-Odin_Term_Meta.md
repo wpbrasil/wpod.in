@@ -2,7 +2,7 @@
 
 No Odin é possível criar campos para a telas de adicionar e editar termos de qualquer taxonomia. Veja abaixo como utilizar e quais campos estão disponíveis.
 
-## Instalação:
+## Instalação
 
 Adicione a seguinte linha no functions.php do seu tema:
 
@@ -10,7 +10,7 @@ Adicione a seguinte linha no functions.php do seu tema:
 require_once get_template_directory() . '/core/classes/class-term-meta.php';
 ```
 
-## Criando um Term Meta:
+## Criando um Term Meta
 
 Você deve instanciar a classe para criar o _Term Meta_ da seguinte forma:
 
@@ -21,7 +21,7 @@ $category_meta = new Odin_Term_Meta(
 );
 ```
 
-## Adicionando campos no Term Meta:
+## Adicionando campos no Term Meta
 
 Adicione os campos utilizando o método `set_fields()` como por exemplo:
 
@@ -41,7 +41,7 @@ $category_meta->set_fields(
 Como é possível ver no exemplo, é necessário criar um _array_ que irá conter os campos do nosso _Metabox_.  
 Tipos de campo:
 
-### Estão disponível os seguintes tipos de campo:
+### Estão disponível os seguintes tipos de campo
 
 - [text](#wiki-text)
 - [textarea](#wiki-textarea)
@@ -297,7 +297,7 @@ array(
 )
 ```
 
-## Utilizando os campos do Term Meta no seu tema:
+## Utilizando os campos do Term Meta no seu tema
 
 Para recuperar a informação de um campo do _Term Meta_ use a função `odin_get_term_meta()`.
 
@@ -312,15 +312,15 @@ Exemplo para pegar o valor do campo `your_id_name` dentro de um loop:
 ```php
 $terms = get_terms( 'category' );
 if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-	foreach( $terms as $term ) {
-		if ( $field = odin_get_term_meta( $term->term_id, 'your_id_name' ) ) {
-			echo 'Valor do campo: ' . $field;
-		}
-	}
+    foreach( $terms as $term ) {
+        if ( $field = odin_get_term_meta( $term->term_id, 'your_id_name' ) ) {
+            echo 'Valor do campo: ' . $field;
+        }
+    }
 }
 ```
 
-## Exemplo:
+## Exemplo
 
 Veja exatamente como criar um metabox em seu tema (bónus campos do HTML5).
 
@@ -637,6 +637,6 @@ add_action( 'init', 'category_term_meta_example', 1 );
 **Na página de editar termo:**
 ![odin_term_meta](http://i.imgur.com/d6IovyZ.png)
 
-## Código fonte:
+## Código fonte
 
 `Odin_Term_Meta` esta localizado em [`core/classes/class-term-meta.php`](https://github.com/wpbrasil/odin/blob/master/core/classes/class-term-meta.php).
