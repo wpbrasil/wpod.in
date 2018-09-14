@@ -9,7 +9,7 @@ Para compilar o seu Sass, o Odin já possui tarefas do Grunt preparadas para iss
 
 Após concluir a instalação para compilar o Sass, navegue até a pasta `/src/` e execute os comandos a partir deste diretório.
 
-## Compilando Arquivos:
+## Compilando Arquivos
 
 Utilize os comandos em seu terminal, a partir do diretório `/src/`.
 
@@ -41,18 +41,18 @@ Caso você queira utilizar o Compass, é preciso adicionar a opção `compass: t
 
 Para mais opções e informações, veja o projeto do [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass).
 
-## Estrutura de Arquivos:
+## Estrutura de Arquivos
 
 Os arquivos do Odin no Sass estão estruturados da seguinte forma
 
-```
+```md
 sass/
 ├── style.scss (Arquivo para desenvolvimento)
 ├── bootstrap/ (Arquivos do Bootstrap Sass)
 ├── odin/
-│   └── _core.scss (Estilos para compatibilidade de elementos do WordPress/Bootstrap)
+│ └── \_core.scss (Estilos para compatibilidade de elementos do WordPress/Bootstrap)
 └── wordpress/
-    └── _wordpress.scss (Estilos para classes padrão do WordPress)
+└── \_wordpress.scss (Estilos para classes padrão do WordPress)
 ```
 
 ## Código Fonte
