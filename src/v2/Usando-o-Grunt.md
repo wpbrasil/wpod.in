@@ -1,6 +1,6 @@
 # Utilizando Grunt com Odin
 
-## O que é Grunt?
+## O que é Grunt
 
 Grunt é um automatizador de tarefas. No Odin você pode utilizá-lo para fazer deploy do seu site, minificar imagens, compilar Sass, dentre outras tarefas.
 
@@ -41,7 +41,7 @@ O comando `grunt` vai compilar todos os arquivos Sass fazer o lint dos scritps, 
 
 Crie um arquivo chamado .ftppass na pasta `wp-content/themes/odin-master/src` com a seguinte estrutura:
 
-```
+```json
 {
   "key_for_deploy": {
     "username": "username",
