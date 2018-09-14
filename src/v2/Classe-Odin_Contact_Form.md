@@ -2,7 +2,7 @@
 
 Você não precisa mais utilizar plugins para criar formulários de contato no Odin. Utilize a classe _Odin_Contact_Form_ que será capaz de gerar o formulário utilizando `wp_mail()` e ainda validar os campos por HTML5 e PHP antes deles serem enviados por e-mail.
 
-## Instalação:
+## Instalação
 
 Adicione as seguintes linhas em seu `functions.php`:
 
@@ -11,7 +11,7 @@ require_once get_template_directory() . '/core/classes/abstracts/abstract-front-
 require_once get_template_directory() . '/core/classes/class-contact-form.php';
 ```
 
-## Criando um formulário de contato:
+## Criando um formulário de contato
 
 Devemos instanciar a classe `Odin_Contact_Form` para criar o Formulário:
 
@@ -21,7 +21,7 @@ function odin_contact_form() {
         'form_id', // ID do formulário
         'eu@email.com', // E-mail do destinatário.
         array( 'vc@email.com', 'tu@email.com' ), // array com e-mails que receberão cópia.
-        array( 'alguem@email.com' ) // array com e-mails que receberão cópia oculta.
+        array( 'fulano@email.com' ) // array com e-mails que receberão cópia oculta.
         // array( 'class' => 'form' ) // array com atributos para o formulário.
         // 'file' // string com método que será enviado o anexo, no caso 'file' como anexo e 'url' para enviar links.
     );
@@ -34,7 +34,7 @@ add_action( 'init', array( odin_contact_form(), 'init' ), 1 );
 Isso apenas cria a instância do formulário!
 Você ainda precisa adicionar os campos e também exibir ele no tema.
 
-## Adicionando campos ao formulário de contato:
+## Adicionando campos ao formulário de contato
 
 Adicione os campos utilizando o método `set_fields()` como por exemplo:
 
@@ -86,9 +86,9 @@ $form->set_fields(
 );
 ```
 
-Como é possível ver no exemplo, é necessário criar um array que funcionará como fiedset e dentro dele outro array que terá campos do nosso formulário de contato.
+Como é possível ver no exemplo, é necessário criar um array que funcionará como fieldset e dentro dele outro array que terá campos do nosso formulário de contato.
 
-## Grupos de campos/fieldset:
+## Grupos de campos/fieldset
 
 O fieldset poderá ter três parâmetros:
 
@@ -108,7 +108,7 @@ $form->set_fields(
 );
 ```
 
-## Tipos de campo:
+## Tipos de campo
 
 ### text
 
@@ -253,7 +253,7 @@ array(
     // 'attributes' => array(), // Opcional (atributos para input HTML/HTML5)
     'default'       => 'three', // Opcional
     'description'   => __( 'Description Example', 'odin' ), // Opcional
-    'options'       => array( // Obrigatório (adicione aque os ids e títulos)
+    'options'       => array( // Obrigatório (adicione aqui os ids e títulos)
         'one'   => 'One',
         'two'   => 'Two',
         'three' => 'Three',
@@ -278,7 +278,7 @@ array(
     // 'attributes' => array(), // Opcional (atributos para input HTML/HTML5)
     'default'     => 'three', // Opcional
     'description' => __( 'Description Example', 'odin' ), // Opcional
-    'options'     => array( // Obrigatório (adicione aque os ids e títulos)
+    'options'     => array( // Obrigatório (adicione aqui os ids e títulos)
         'one'   => 'One',
         'two'   => 'Two',
         'three' => 'Three',
@@ -287,7 +287,7 @@ array(
 )
 ```
 
-## Configurando o assunto do e-mail:
+## Configurando o assunto do e-mail
 
 Personalize o assunto do e-mail utilizando o método `set_subject()`:
 
@@ -301,7 +301,7 @@ Para criar o assunto do e-mail é possível usar placeholders em forma de shortc
 - `[sent_date]` – Data de envio
 - `[sent_time]` – Hora de envio
 
-## Configurando o tipo de conteúdo:
+## Configurando o tipo de conteúdo
 
 Os e-mails são enviados como texto puro, entretanto é possível configurar para serem enviados em HTML utilizando o método `set_content_type()`:
 
@@ -309,7 +309,7 @@ Os e-mails são enviados como texto puro, entretanto é possível configurar par
 $form->set_content_type( 'html' );
 ```
 
-## Configurando e-mail de resposta:
+## Configurando e-mail de resposta
 
 Por padrão os e-mails são enviados pela `função wp_mail()` que utiliza o e-mail cadastrado nas configurações do site para enviar.
 Esta é a melhor forma de enviar um e-mail, pois usando o e-mail de quem preenche o formulário o e-mail pode ser marcado como spam e bloqueado antes de chegar na sua caixa de mensagens.
@@ -320,7 +320,7 @@ Entretanto você pode configurar o e-mail que você irá responder utilizando o 
 $form->set_reply_to( 'id_do_campo_de_email' );
 ```
 
-## Exibindo Formulário de Contato no tema:
+## Exibindo Formulário de Contato no tema
 
 Com tudo configurado você já poderá exibir o formulário de contato no seu tema utilizando o método `render()`.
 Veja um exemplo com a função que chamamos de `odin_contact_form()`:
@@ -329,7 +329,7 @@ Veja um exemplo com a função que chamamos de `odin_contact_form()`:
 echo odin_contact_form()->render();
 ```
 
-## Filtros da classe:
+## Filtros da classe
 
 Atualmente existe 3 actions que estão livres para uso nesta classe:
 
@@ -386,7 +386,7 @@ function odin_contact_form_headers( $headers ) {
 add_filter( 'odin_contact_form_mail_headers_contact_form', 'odin_contact_form_headers' );
 ```
 
-## Exemplo completo:
+## Exemplo completo
 
 Formulário simples com os campos **Nome**, **E-Mail** e **Mensagem**:
 
@@ -430,7 +430,7 @@ function odin_contact_form() {
                         'attributes'  => array( // Optional (html input elements)
                             'placeholder' => __( 'Digite o seu e-mail!' )
                         ),
-                        'description' => __( 'Precisa ser um endere&ccedil;o de e-mail v&aacute;lido', 'odin' ) // Optional
+                        'description' => __( 'Precisa ser um endereço de e-mail válido;lido', 'odin' ) // Optional
                     ),
                     array(
                         'id'          => 'sender_message', // Required
@@ -474,8 +474,6 @@ Depois no tema basta adicionar a seguinte linha para mostrar o formulário
 echo odin_contact_form()->render();
 ```
 
-## Código fonte:
+## Código fonte
 
 Odin_Contact_Form esta localizado em [`core/classes/class-contact-form.php`](https://github.com/wpbrasil/odin/blob/master/core/classes/class-contact-form.php).
-
-[top](#)
