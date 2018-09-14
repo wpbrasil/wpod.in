@@ -2,7 +2,7 @@
 
 É possível construir uma página de _Opções do Tema_ utilizando a classe `Odin_Theme_Options` que pode ser encontrada em `core/classes/class-theme-options.php`.
 
-## Instalação:
+## Instalação
 
 Adicione a seguinte linha em seu `functions.php`
 
@@ -10,7 +10,7 @@ Adicione a seguinte linha em seu `functions.php`
 require_once get_template_directory() . '/core/classes/class-theme-options.php';
 ```
 
-## Criando Página:
+## Criando Página
 
 Devemos instanciar a classe `Odin_Theme_Options`
 
@@ -22,7 +22,7 @@ $odin_theme_options = new Odin_Theme_Options(
 );
 ```
 
-## Criando Abas:
+## Criando Abas
 
 É possível criar quantas abas você quiser na página de opcões:
 
@@ -41,7 +41,7 @@ $odin_theme_options->set_tabs(
 );
 ```
 
-## Criando campos na página:
+## Criando campos na página
 
 Utilize do `$set->fields` para criar todos os campos da página.
 
@@ -108,7 +108,7 @@ $odin_theme_options->set_fields(
 );
 ```
 
-## Tipos de Campo:
+## Tipos de Campo
 
 ### text
 
@@ -338,7 +338,7 @@ array(
 )
 ```
 
-## Utilizando os Campos:
+## Utilizando os Campos
 
 Para utilizar as opções salvas em seu tema é necessário criar uma variável que irá armazenar todos os campos salvos na “aba”. Basta passar o id da aba da seguinte forma:
 
@@ -708,6 +708,6 @@ add_action( 'init', 'odin_theme_settings_example', 1 );
 
 ![page-odin-settings-2](https://cloud.githubusercontent.com/assets/1139893/4895777/3b5b019c-63f0-11e4-9a26-f0e8f6d9068f.png)
 
-## Código Fonte:
+## Código Fonte
 
 `Odin_Theme_Options` esta localizado em [core/classes/class-theme-options.php](https://github.com/wpbrasil/odin/blob/master/core/classes/class-theme-options.php).
