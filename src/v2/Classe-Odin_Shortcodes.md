@@ -1,6 +1,6 @@
 # Shortcodes integrados
 
-## Instalação:
+## Instalação
 
 Adicione a seguinte linha em seu `functions.php`
 
@@ -8,7 +8,7 @@ Adicione a seguinte linha em seu `functions.php`
 require_once get_template_directory() . '/core/classes/class-shortcodes.php';
 ```
 
-## Bootstrap Shortcodes:
+## Bootstrap Shortcodes
 
 O Odin possui o [Bootstrap 3](http://getbootstrap.com) implementado. Preparamos shortcodes com os principais componentes do bootstrap para facilitar o desenvolvimento.
 
@@ -18,7 +18,7 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 
 ### Botões
 
-```
+```html
 [button]Text[/button]
 ```
 
@@ -35,7 +35,7 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 
 ### Grupo de botões
 
-```
+```html
 [button_group][button]Text[/button][button]Text[/button][/button_group]
 ```
 
@@ -45,9 +45,9 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 - `size` define o tamanho dos botões, aceita os valores: `lg`, `sm` e `xs`.
 - `justified` faz com que o tamanho dos botões ocupem toda a área na horizontal, é booleano, aceita `true`.
 
-### Alertas:
+### Alertas
 
-```
+```html
 [alert]Message[/alert]
 ```
 
@@ -56,9 +56,9 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 - `type` tipo do alerta, aceita os valores: `success`, `info`, `warning` e `danger`.
 - `close` adiciona um botão para fechar o alerta, é booleano, aceita `true`.
 
-### Etiquetas:
+### Etiquetas
 
-```
+```html
 [label]Message[/label]
 ```
 
@@ -66,15 +66,15 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 
 - `type` tipo do label, aceita os valores: `default`, `primary`, `success`, `info`, `warning` e `danger`.
 
-### Badges:
+### Badges
 
-```
+```html
 [badge]123[/badge]
 ```
 
-### Icons:
+### Icons
 
-```
+```html
 [icon type="adjust"]
 ```
 
@@ -282,9 +282,9 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 - `zoom-in`
 - `zoom-out`
 
-### Wells:
+### Wells
 
-```
+```html
 [well]Content[/well]
 ```
 
@@ -292,9 +292,9 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 
 - `size` define o tamanho dos botões, aceita os valores: `lg` e `sm`.
 
-### Tabelas:
+### Tabelas
 
-```
+```html
 [table cols="#,Table heading" rows="1,Table cell"]
 ```
 
@@ -305,9 +305,9 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 - `cols` lista dos títulos das colunas separados por `,` (virgula)
 - `rows` lista de linhas de cada coluna separado por `|` (pipe) e cada item de lista separado por `,` (virgula)
 
-### Grids:
+### Grids
 
-```
+```html
 [row]
 [col class="col-md-6"]Content left[/col]
 [col class="col-md-6"]Content right[/col]
@@ -320,9 +320,9 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 - col
 - `class` recebe classes de grids do Twitter Bootstrap
 
-### Progress Bar:
+### Progress Bar
 
-```
+```html
 [progress]
 ```
 
@@ -334,9 +334,9 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 - `max` define o valor máximo de preenchimento da barra, o padrão é `100`.
 - `min` define o valor mínimo de preenchimento da barra, o padrão é `0`.
 
-### Painéis:
+### Painéis
 
-```
+```html
 [panel][panel_body]Content[/panel_body][/panel]
 ```
 
@@ -345,9 +345,9 @@ Também é possível utilizar os shortcodes sem o bootsrap, mas lembre-se que ne
 - panel:
 - `type` define o tipo de painel, aceita os valores: `default`, `primary`, `success`, `info`, `warning` e `danger`.
 
-### Abas:
+### Abas
 
-```
+```html
 [tabs]
 [tab id="id" active="true"]Title[/tab]
 [/tabs]
@@ -368,9 +368,9 @@ Content
 - `id` define o ID do conteúdo da aba (precisa ser o mesmo adicionado na aba).
 - `active` campo booleano que define qual conteúdo de aba será marcada como ativo.
 
-### Accordion:
+### Accordion
 
-```
+```html
 [accordions id="my-accordion"]
 [accordion id="my-accordion" title="title"]
 Content
@@ -391,9 +391,9 @@ Content
 - `type` define o tipo de sanfona, aceita os valores: `default`, `primary`, `success`, `info`, `warning` e `danger`.
 - `active` campo booleano que define qual aba será marcada como ativa
 
-### Tooltips:
+### Tooltips
 
-```
+```html
 [tooltip title="Text"]Content[/tooltip]
 ```
 
@@ -405,9 +405,9 @@ Content
 
 ## Google Shortcodes
 
-### Mapas:
+### Mapas
 
-```
+```html
 [map]
 ```
 
@@ -436,19 +436,19 @@ Content
 
 ## Helpers
 
-### Clear:
+### Clear
 
 Adiciona um `<br class="clear" />` no conteúdo para limpar o efeito do CSS float.
 
-```
+```html
 [clear]
 ```
 
-### QR Code:
+### QR Code
 
 Cria um QR Code utilizando o [goqr.me](http://goqr.me/).
 
-```
+```html
 [qrcode data="Text"]
 ```
 
@@ -458,6 +458,6 @@ Cria um QR Code utilizando o [goqr.me](http://goqr.me/).
 - `size` define o tamanho do QR Code, o padrão é `150x150`.
 - `title` configura um título para a imagem do QR Code.
 
-## Código fonte:
+## Código fonte
 
 `Odin_Shortcodes` esta localizado em [core/classes/class-shortcodes.php.](https://github.com/wpbrasil/odin/blob/master/core/classes/class-shortcodes.php)
