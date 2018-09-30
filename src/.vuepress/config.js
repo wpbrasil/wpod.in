@@ -28,7 +28,7 @@ module.exports = {
             ['/guide/', 'Guia'],
             {
                 title: 'Versão 2.x',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     ['/v2/', 'Introdução'],
                     ['/v2/Classe-Odin_Post_Type.html', 'Custom Post Types/Tipos de conteúdo'],
@@ -43,6 +43,20 @@ module.exports = {
                     ['/v2/Usando-o-Grunt.html', 'Usando o Grunt'],
                     ['/v2/Usando-o-Sass.html', 'Usando o Sass'],
                     ['/v2/Customizando-o-Admin.html', 'Personalizando o Admin'],
+                ]
+            },
+            {
+                title: 'Versão 3.x (Tema)',
+                collapsable: true,
+                children: [
+                    ['/v3/', 'Introdução']
+                ]
+            },
+            {
+                title: 'Odin Toolkit 1.x (Plugin)',
+                collapsable: true,
+                children: [
+                    ['/odin-toolkit/v1/', 'Introdução']
                 ]
             }
         ],
