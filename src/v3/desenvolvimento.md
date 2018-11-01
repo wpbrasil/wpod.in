@@ -8,7 +8,7 @@ O Odin utiliza diversas ferramentas para compilar arquivos e automatizar de tare
 
 ## Primeiros passos
 
-```sh
+```bash
 # Instale as dependências
 npm install
 
