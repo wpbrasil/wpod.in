@@ -46,17 +46,18 @@ module.exports = {
                 ]
             },
             {
-                title: 'Versão 3.x (Tema)',
+                title: 'Versão 3.x (Beta)',
                 collapsable: true,
                 children: [
-                    ['/v3/', 'Introdução']
+                    ['/v3/', 'Introdução'],
+                    ['/v3/desenvolvimento.html', 'Desenvolvimento']
                 ]
             },
             {
-                title: 'Odin Toolkit 1.x (Plugin)',
+                title: 'Plugins',
                 collapsable: true,
                 children: [
-                    ['/odin-toolkit/v1/', 'Introdução']
+                    ['/plugins/odin-toolkit/', 'Odin Toolkit 1.x']
                 ]
             }
         ],

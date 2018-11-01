@@ -2,35 +2,16 @@
 
 ## O que é o Odin?
 
-Odin é um framework desenvolvido pela comunidade [@wpbrasil](https://github.com/wpbrasil) para <s>chutar bundas</s> auxiliar o desenvolvimento de temas para WordPress.
+Odin é um projeto criado e mantido pela comunidade [@wpbrasil](https://github.com/wpbrasil) para <s>chutar bundas</s> auxiliar o desenvolvimento de temas WordPress com ferramentas modernas.
 
 ## Download
 
-[Baixar](https://api.github.com/repos/wpbrasil/odin/zipball/2.3.0) versão 2.x `.zip`
+- [Baixar versão 2.x](https://api.github.com/repos/wpbrasil/odin/zipball/2.3.0) `.zip`
+- [Baixar versão 3.0.0-beta](https://github.com/wpbrasil/odin/archive/3.0.0-beta.zip) `.zip`
 
 ## Instalação
 
 Envie a pasta "odin" para o diretório de temas padrão do WordPress `wp-content/themes` ou simplesmente envie o arquivo zipado utilizando o instalador de temas do WordPress.
-
-## Destaques
-
-Ferramentas, bibliotecas, suporte para plugins e outras features.
-
-- [WooCommerce Suporte](http://wordpress.org/extend/plugins/woocommerce/)
-- [JetPack Suportado](http://wordpress.org/extend/plugins/jetpack/) Infinite Scroll
-- [Bootstrap](http://getbootstrap.com/)
-- [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
-- [HTML5shiv](https://github.com/aFarkas/html5shiv)
-- [matchMedia() polyfill](https://github.com/paulirish/matchMedia.js/)
-- [Respond.js](https://github.com/scottjehl/Respond)
-- [Sass](http://sass-lang.com/)
-- [Compass](http://compass-style.org/)
-- [Grunt.js](http://gruntjs.com/)
-- [aq_resize](https://github.com/sy4mil/Aqua-Resizer)
-- [FitVids](https://github.com/davatron5000/FitVids.js)
-- [EditorConfig](http://editorconfig.org/)
-- [goqr.me](http://goqr.me/)
-- [Google Maps](https://developers.google.com/maps/)
 
 ## Comunidade
 
