@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src && rm -rf docs && cp -r src/.vuepress/dist docs && echo 'wpod.in' > docs/CNAME",
-    "serve": "npm run build && npx http-server docs -p 8066 -a localhost",
-    "preinstall": "node preinstall.js"
+    "serve": "npm run build && npx http-server docs -p 8066 -a localhost"
   },
   "devDependencies": {
     "vuepress": "^0.14.3"
